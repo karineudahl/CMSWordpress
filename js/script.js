@@ -1,6 +1,6 @@
 const contentContainer = document.querySelector(".content-container"); 
 
-const url = "https://student-noroff.store/project-exam-1/wp-json/wp/v2/posts?per_page=100"; 
+const url = "https://student-noroff.store/fedup/wp-json/wp/v2/posts"; 
 
 async function getBlogpost() {
     try {
@@ -10,8 +10,10 @@ async function getBlogpost() {
         contentContainer.innerHTML = "";
 
         products.forEach(function(product) {
-            contentContainer.innerHTML += `<h2></h2>
-                                            <p></p>`;
+            contentContainer.innerHTML +=   `<div class="content">
+                                                <h2>${product.title.rendered}</h2>
+                                                <p>${product.content.rendered}</p>
+                                            </div>`;
         })
         
     }
