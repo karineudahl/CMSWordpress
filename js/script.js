@@ -11,11 +11,12 @@ async function getBlogpost() {
 
         products.forEach(function(product) {
             contentContainer.innerHTML +=   `<div class="content">
-                                                <h2>${product.title.rendered}</h2>
-                                                <p>${product.content.rendered}</p>
+                                                <a href="details.html?id=${product.id}">
+                                                    <h2>${product.title.rendered}</h2>
+                                                    <p>${product.content.rendered}</p>
+                                                </a>
                                             </div>`;
-        })
-        
+        })       
     }
 
     catch(error) {
