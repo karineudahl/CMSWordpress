@@ -15,8 +15,8 @@ async function getBlogpost() {
                                                     <h2>${product.title.rendered}</h2>
                                                     <p>${product.content.rendered}</p>
                                                 </a>
-                                            </div>`;
-        })       
+                                            </div>`
+        });       
     }
 
     catch(error) {
